@@ -36,7 +36,7 @@ contract MyToken is ERC721, ERC721URIStorage, Ownable {
 
     constructor(
         address initialOwner
-    ) ERC721("MyToken", "MTK") Ownable(initialOwner) {}
+    ) ERC721("NFTMarketplace", "NFTM") Ownable(initialOwner) {}
 
     function updateListPrice(uint256 _listPrice) public onlyOwner {
         require(owner() == msg.sender, "Only owner can update listing price");
