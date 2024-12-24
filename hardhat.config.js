@@ -1,5 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-ethers");
+require("@nomiclabs/hardhat-etherscan");
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -28,5 +29,8 @@ module.exports = {
         runs: 200
       }
     }
+  },
+  etherscan: {
+    apiKey: process.env.BSCSCAN_API_KEY,
   }
 };
